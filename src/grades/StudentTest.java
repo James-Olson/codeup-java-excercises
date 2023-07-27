@@ -3,13 +3,13 @@ package grades;
 
 public class StudentTest {
     public static void main(String[] args) {
-        Student xavier = new Student("xavier");
+        Student jim = new Student("xavier");
 
-        xavier.addGrade(100);
-        xavier.addGrade(90);
-        xavier.addGrade(85);
+        jim.addGrade(100);
+        jim.addGrade(90);
+        jim.addGrade(85);
 
 
-        System.out.println(xavier.getAverageGrade());
+        System.out.println(jim.getAverageGrade());
     }
 }

@@ -3,70 +3,75 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    private final Scanner scanner;
+    private Scanner scanner;
 
-    public Input(Scanner scanner) {
-        this.scanner = scanner;
-    }
-    //you can "construct" an object many ways this is constructing "instance" of an object.
-    public Input(){
-        scanner = new Scanner(System.in);
-    }
-    public String getString(){
-        System.out.println("Please input string: ");
-        return scanner.nextLine();
+    public Input() {
+        this.scanner = new Scanner(System.in);
     }
 
-    public String getString(String prompt){
-        System.out.println(prompt);
-        return scanner.nextLine();
+    public String getString() {
+        return scanner.next();
     }
 
-    public Boolean yesNo(){
-        String userInput = getString("Please enter yes or no: ");
-        if(userInput.equalsIgnoreCase("yes") || userInput.equalsIgnoreCase("y")){
-            return true;
+
+    public int getInt() {
+        String input = scanner.next();
+        try {
+            return Integer.valueOf(input);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input. Please enter an integer.");
+            return getInt();
         }
-        else {
+    }
+
+    public int getIntChoice() {
+        return scanner.nextInt();
+    }
+
+    public double getDouble() {
+        String input = scanner.next();
+        try {
+            return Double.valueOf(input);
+        } catch(NumberFormatException e) {
+            System.out.println("Invalid input. Please enter a double.");
+            return getDouble();
+        }
+    }
+
+    public boolean yesNo() {
+        System.out.println("\nContinue? [Y/N]");
+        String input = scanner.next();
+        if(input.equalsIgnoreCase("yes") || input.equalsIgnoreCase("y")) {
+            return true;
+        } else {
             return false;
         }
     }
 
-    public int getInt(int min, int max){
-        System.out.println("Please enter a number between" + min + "and" + max);
-        int userInput = scanner.nextInt();
-        if(userInput < min || userInput > max){
-            return getInt(min, max);
-        }
-        return userInput;
-    }
-    public int getInt(){
-        System.out.println("Please enter a number: ");
-        int userInput = scanner.nextInt();
-        return userInput;
+    public int getInt(int min, int max) {
+        int input;
+        do {
+            System.out.printf("Enter a number within the range of %s and %s%n", min, max);
+            input = scanner.nextInt();
 
-    }
-
-    public double getDouble(double min, double max){
-        System.out.println("Please enter a number between " + min + " and " + max);
-        try {
-            double userInput = Double.valueOf(getString());
-            if(userInput < min || userInput > max){
-                return getDouble(min, max);
+            if(input < min || input > max) {
+                System.out.println("Invalid Input!");
             }
-        } catch (NumberFormatException){
-
-        }
-
-
-
-        return userInput;
+        } while(input < min || input > max);
+        return input;
     }
 
-    public double getDouble(){
-        System.out.println("Please enter a number: ");
-        double userInput = scanner.nextDouble();
-        return userInput;
+    public double getDouble(double min, double max) {
+        double input;
+        do {
+            System.out.printf("Enter a number within the range of %s and %s%n", min, max);
+            input = scanner.nextDouble();
+
+            if(input < min || input > max) {
+                System.out.println("Invalid Input!");
+            }
+        } while(input < min || input > max);
+        return input;
     }
 
 }
