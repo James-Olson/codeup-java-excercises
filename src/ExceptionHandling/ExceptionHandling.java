@@ -3,13 +3,13 @@ import java.util.Scanner;
 
 public class ExceptionHandling {
     public static void main(String[] args) throws Exception {
-//        int[] numbers = {1, 2, 3};
-        //Exception easy fix in program
-        //System.out.println(numbers[999]); //Exception index out of bounds
-//        System.out.println(numbers[1]);
+        int[] numbers = {1, 2, 3};
+//        Exception easy fix in program
+        /*System.out.println(numbers[999]);*/ //Exception index out of bounds
+        System.out.println(numbers[1]);
 
-        //Error not an immediate remedy for program
-        //int[] secondArray = {"nik", 1};// Error incompatible types stored in an array
+//        Error not an immediate remedy for program
+        /*int[] secondArray = {"nik", 1};// Error incompatible types stored in an array*/
 
         try {
             System.out.println("Let's see...");
@@ -23,7 +23,7 @@ public class ExceptionHandling {
             // throw exceptions here
         }
 
-        int[] numbers = {1, 2, 3};
+
         int x;
 
         try {

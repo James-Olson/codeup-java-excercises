@@ -3,7 +3,7 @@ package grades;
 
 public class StudentTest {
     public static void main(String[] args) {
-        Student jim = new Student("xavier");
+        Student jim = new Student("jim");
 
         jim.addGrade(100);
         jim.addGrade(90);

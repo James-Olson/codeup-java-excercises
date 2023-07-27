@@ -36,50 +36,37 @@ public class Person {
         Person morty = new Person("Morty", "Smith");
         Person p2 = new Person("Farrukh");
 
-//        System.out.println(person.sayHello());
+        System.out.println(person.sayHello());
         System.out.println(rick.sayHello());
 
         System.out.println(Math.PI);
 
         // Executing the sayHello method.
-//        System.out.println(rick.sayHello());
+        System.out.println(rick.sayHello());
 
-//        OOP.Person morty = new OOP.Person();
-//        morty.firstName = "Rick";
-//        morty.lastName = "Sanchez";
-
-//        OOP.Person morty = rick;
-
-//        System.out.println(morty.sayHello());
-//
-//        System.out.println("morty: " + morty);
-//        System.out.println("rick: " + rick);
-
-//        sayHello();
-//
-//        System.out.println(morty == rick);
-//        System.out.println(morty.equals(rick));
-//
-//        System.out.println(rick.firstName.equals(morty.firstName));
-
-        // prints "Hello from Rick Sanchez!"
-
-        // Reference in a static context
-//        System.out.println(OOP.Person.firstName);
-//        System.out.println(OOP.Person.sayHello());
+       OOP.Person kevin = new OOP.Person();
+       kevin.firstName = "Rick";
+       kevin.lastName = "Sanchez";
 
 
-        Person test = new Person();
 
-        test.firstName = "Jay";
+       System.out.println(kevin.sayHello());
 
-        Config config = new Config("jayman123", "password");
+       System.out.println("morty: " + morty);
+       System.out.println("rick: " + rick);
 
-        System.out.println(config.getUsername());
-        config.setUsername("bumblebee123");
-        System.out.println(config.getUsername());
-//        System.out.println(config.username);
-//        System.out.println(config.password);
+       sayHello();
+
+       System.out.println(morty == rick);
+       System.out.println(morty.equals(rick));
+
+       System.out.println(rick.firstName.equals(morty.firstName));
+
+         /*prints "Hello from Rick Sanchez!"*/
+
+         //Reference in a static context
+        System.out.println(OOP.Person.firstName);
+        System.out.println(OOP.Person.sayHello());
 
 
     }

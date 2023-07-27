@@ -29,9 +29,6 @@ public class Student {
         Student s1 = new Student("CodeyThaDuck");
         Person p1 = new Person();
 
-        p1.firstName = "Jayakjnweflaiejwf;aionef;oaiejnf;oaiwjef;oaiwejf;aowiejnf;oa";
 
-        s1.setName("Jay");
-        System.out.println(s1.name);
     }
 }

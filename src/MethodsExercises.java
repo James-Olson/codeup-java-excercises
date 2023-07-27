@@ -2,21 +2,21 @@ import java.util.Scanner;
 
 public class MethodsExercises {
     public static void main(String[] args) {
-//        int number1 = 10;
-//        int number2 = 2;
-//
-//        System.out.println(addition(number1,number2));      //12
-//        System.out.println(subtraction(number1,number2));   //8
-//        System.out.println(multiplication(number1,number2)); //20
-//        System.out.println(division(number1,number2));      // 5
-//        System.out.println(modulus(number1,number2));      // 0
-//
-//        getInteger(1, 10);
-//        System.out.println(factorial());
+       int number1 = 10;
+       int number2 = 2;
 
-//        addition(1, 2);
-//        addition(1.1, 1.2);
-//        System.out.println(addition(1, 2));
+       System.out.println(addition(number1,number2));
+       System.out.println(subtraction(number1,number2));
+       System.out.println(multiplication(number1,number2));
+       System.out.println(division(number1,number2));
+       System.out.println(modulus(number1,number2));
+
+       getInteger(1, 10);
+       System.out.println(factorial());
+
+       addition(1, 2);
+       addition(1.1, 1.2);
+       System.out.println(addition(1, 2));
         System.out.println(dice());
 
     }
