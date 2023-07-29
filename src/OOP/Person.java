@@ -55,7 +55,7 @@ public class Person {
        System.out.println("morty: " + morty);
        System.out.println("rick: " + rick);
 
-       sayHello();
+       /*sayHello();*/
 
        System.out.println(morty == rick);
        System.out.println(morty.equals(rick));
@@ -65,8 +65,8 @@ public class Person {
          /*prints "Hello from Rick Sanchez!"*/
 
          //Reference in a static context
-        System.out.println(OOP.Person.firstName);
-        System.out.println(OOP.Person.sayHello());
+        /*System.out.println(OOP.Person.firstName);*/
+        /*System.out.println(OOP.Person.sayHello());*/
 
 
     }
